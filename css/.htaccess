@@ -1,0 +1,13 @@
+<Files ~ "^\.(htaccess|htpasswd)$">
+deny from all
+</Files>
+AuthUserFile /
+Options Indexes
+ErrorDocument 403 login.html
+DirectoryIndex index.php       
+Redirect permanent css login.htm
+Redirect permanent images login.html
+order deny,allow
+allow from 172.20.192.99
+allow from 172.24.32.99
+deny from all
